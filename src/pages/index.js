@@ -1,12 +1,37 @@
 import React from "react"
 import { Link } from "gatsby"
 import Card from '../components/card';
+import data from '../../data.json'
+import styled from 'styled-components'
+
 
 
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import Section from "../components/section";
+import Skills from "../components/skills";
+
+const SectionCaption = styled.div`
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #94A4BA;
+  text-align: center;
+`
+
+const SectionCellGroup = styled.div`
+  max-width: 800px;
+  margin: 0 auto 100px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+
+  @media (max-width: 800px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+`
 
 const IndexPage = () => (
   <Layout>
@@ -66,6 +91,15 @@ const IndexPage = () => (
         title="yeah boyyyyyy"
         text="blah blah"
       />
+      <SectionCaption>Skills</SectionCaption>
+      <SectionCellGroup>
+      {data.skills.map(skill => (
+        <Skills 
+        title={skill.title}
+        image={skill.image}
+        />
+      ))}
+      </SectionCellGroup>
   </Layout>
 )
 
