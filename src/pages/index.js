@@ -6,6 +6,7 @@ import Card from '../components/card';
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import Section from "../components/section";
 
 const IndexPage = () => (
   <Layout>
@@ -59,6 +60,12 @@ const IndexPage = () => (
         image={require('../images/Planes10.png')} />
         </div>
       </div>
+      <Section
+        image={require('../images/Planes10.png')}
+        logo={require('../images/Planes10.png')}
+        title="yeah boyyyyyy"
+        text="blah blah"
+      />
   </Layout>
 )
 
