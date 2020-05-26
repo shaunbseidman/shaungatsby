@@ -1,0 +1,1082 @@
+/* TABLE OF CONTENTS - mixinsMembership.scss
+
+... Color Variables
+... Block Level Sizing + Spacing +Padding
+... Screen-size + media query mixins
+... font families
+... font + type size helpers
+... Button + Link Mixins
+... Helpful Mixins
+... Animations
+*/
+
+/* Color Variables
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+// Base
+$white: #fff;
+$charcoal10: #f7f7f7;
+$charcoal20: #f2f2f2;
+$charcoal30: #e6e6e6;
+$charcoal40: #ccc;
+$charcoal45: #a0a0a0;
+$charcoal50: #757575;
+$charcoal60: #4b4b4b;
+$charcoal70: #292929;
+$charcoal80: #555;
+$black: #000;
+$black10: #191919;
+
+// "Savage" Orchids
+$orchidType70: #4f4b70; //only use for type on $white
+$orchidType60: #756f9d; //only use for type on $white, $orchid10, or $orchid20
+$orchid50: #9994c1;
+$orchid40: #bbb7da;
+$orchid30: #d6d3eb;
+$orchid20: #e7e5f5;
+$orchid10: #eeedfa;
+
+// "Ruthless" Teals
+$teal10: #b3e9e9;
+$teal20: #8dd9d9;
+$teal30: #5fc3c3;
+$teal40: #048282;
+
+// Limited Use Brand Colors - only use with express permission from ui/ux
+$coral: #ef7473;
+$coralLight: #c34d4d;
+$blush: #ffd4d4;
+$dawn: #eceae8;
+
+// RGBA Dark Colors
+$transparentDark00: rgba($charcoal70, 0);
+$transparentDark01: rgba($charcoal70, 0.1);
+$transparentDark05: rgba($charcoal70, 0.5);
+$transparentDark10: rgba($charcoal70, 0);
+$transparentDark30: rgba($charcoal70, 0.3);
+$transparentDark40: rgba($charcoal70, 0.4);
+$transparentDark50: rgba($charcoal70, 0.5);
+$transparentDark60: rgba($charcoal70, 0.6);
+$transparentDark70: rgba($charcoal70, 0.7);
+$transparentDark90: rgba($charcoal70, 0.9);
+
+// RGBA Light Colors
+$transparentLight00: rgba($white, 0);
+$transparentLight20: rgba($white, 0.2);
+$transparentLight30: rgba($white, 0.3);
+$transparentLight50: rgba($white, 0.5);
+$transparentLight80: rgba($white, 0.8);
+$transparentLight90: rgba($white, 0.9);
+$transparentLight95: rgba($white, 0.95);
+
+// Utility Colors
+$error: #d61f0a;
+$errorLight: #fef1f0;
+$success: #287227;
+$successLight: #daf8d9;
+$caution: #866d00;
+$cautionLight: #fff6cf;
+$discountPink: #d70064;
+$focusBlue: #218eff;
+
+// Third Party Colors
+$facebook: #3b579d;
+$facebookLight: #5c76a9;
+$paypal: #009cde;
+$pinterest: #bd081c;
+$instagram: #3f729b;
+$twitter: #55acee;
+$gravatar: #1e8cbe;
+$google: #4285f4;
+$linkedin: #0077b5;
+
+
+//Image Sizes in pixels
+//see: https://confluence.sympoz.net/pages/viewpage.action?spaceKey=FET&title=Image+Sizes+2.0
+$imageWidth86: 86px;
+$imageWidth181: 181px;
+$imageWidth277: 277px;
+$imageWidth373: 373px;
+$imageWidth565: 565px;
+$imageWidth756: 756px;
+$imageWidth1140: 1140px;
+$imageWidth1366: 1366px;
+$imageWidth1600: 1600px;
+$imageWidth1920: 1920px;
+
+// Disabled appearance
+@mixin disabledLook() {
+    background: $charcoal20;
+    color: $charcoal50;
+    cursor: default;
+}
+
+/* Block Level Sizing + Spacing + Padding
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+// Max Page Width for the site.
+$maxPageWidth: 1200px;
+
+// Relative Margins & Padding (spacing)
+$remSpacing1: 0.4rem;
+$remSpacing2: 0.8rem;
+$remSpacing3: 1.6rem;
+$remSpacing4: 2.4rem;
+$remSpacing5: 3.2rem;
+$remSpacing6: 4rem;
+$remSpacing7: 4.8rem;
+$remSpacing8: 5.6rem;
+$remSpacing9: 6.4rem;
+
+// Absolute Margins & Padding (spacing) Note: Use remSpacing whenever possible.
+$spacing1: 4px;
+$spacing2: 8px;
+$spacing3: 16px;
+$spacing4: 24px;
+$spacing5: 32px;
+$spacing6: 40px;
+$spacing7: 48px;
+$spacing8: 56px;
+$spacing9: 64px;
+
+//Fixed Global Nav layout Sizing
+$bluprintBannerHeight: $spacing5;
+$primaryNavHeight: $spacing9; //desktop only
+$secondaryNavHeight: $spacing7; //desktop only
+$mobileNavHeight: $spacing9;
+$totalMobileNavHeight: $bluprintBannerHeight + $mobileNavHeight;
+$totalDesktopNavHeight: $bluprintBannerHeight + $primaryNavHeight + $secondaryNavHeight;
+
+
+// z-indices, z-index
+$layerNeg1: -100; //please only use for opacity animations.
+$layer1: 100;
+$layer2: 200;
+$layer3: 300;
+$layer4: 400;
+$layer5: 500;
+$layer6: 600;
+$layer7: 700;
+$layer8: 800;
+$layer9: 900;
+$layerFixedHeader: 999;
+$layerModal: 11000000; //needs to be this high to cover AddThis and Wisepops injected silliness
+$layerProgressBar: $layerModal + 1;
+
+/* Screen-size + media query mixins
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+// viewport variables
+$viewport-xs-width: 320px;
+$viewport-sm-width: 568px;
+$viewport-md-width: 768px;
+$viewport-lg-width: 1024px;
+$viewport-xl-width: 1440px;
+
+$viewport-xxs-max: ($viewport-xs-width - 1);
+$viewport-xs-max: ($viewport-sm-width - 1);
+$viewport-sm-max: ($viewport-md-width - 1);
+$viewport-md-max: ($viewport-lg-width - 1);
+$viewport-lg-max: ($viewport-xl-width - 1);
+
+// the essential media queries - use liberally
+@mixin mqViewportXs {
+    @media only screen and (min-width: $viewport-xs-width) {
+        @content;
+    }
+}
+
+@mixin mqViewportSm {
+    @media only screen and (min-width: $viewport-sm-width) {
+        @content;
+    }
+}
+
+@mixin mqViewportMd {
+    @media only screen and (min-width: $viewport-md-width) {
+        @content;
+    }
+}
+
+@mixin mqViewportLg {
+    @media only screen and (min-width: $viewport-lg-width) {
+        @content;
+    }
+}
+
+@mixin mqViewportXl {
+    @media only screen and (min-width: $viewport-xl-width) {
+        @content;
+    }
+}
+
+@mixin mqViewportXxl {
+    @media only screen and (min-width: $viewport-xxl-width) {
+        @content;
+    }
+}
+
+// super specific media queries - use sparingly
+@mixin mqViewportMobile() {
+    @media only screen and (max-width: $viewport-xs-max) {
+        @content;
+    }
+}
+
+@mixin mqViewportMobilePortrait() {
+    @media only screen and (max-width: $viewport-xs-max) and (orientation: portrait) {
+        @content;
+    }
+}
+
+@mixin mqViewportXsOnly() {
+    @media only screen and (max-width: $viewport-xs-max) {
+        @content;
+    }
+}
+
+@mixin mqViewportSmOnly() {
+    @media only screen and (min-width: $viewport-sm-width) and (max-width: $viewport-sm-max) {
+        @content;
+    }
+}
+
+@mixin mqViewportMdOnly() {
+    @media only screen and (min-width: $viewport-md-width) and (max-width: $viewport-md-max) {
+        @content;
+    }
+}
+
+@mixin mqViewportLgOnly() {
+    @media only screen and (min-width: $viewport-lg-width) and (max-width: $viewport-lg-max) {
+        @content;
+    }
+}
+
+// temporary breakpoint for unified nav and will be removed, do not use.
+$viewport-md-nav-width: 980px;
+$viewport-md-nav-max: ($viewport-md-nav-width - 1);
+
+@mixin mqViewportMdNav() {
+    @media only screen and (min-width: $viewport-md-nav-width) {
+        @content;
+    }
+}
+
+@mixin mqViewportMdNavOnly() {
+    @media only screen and (max-width: $viewport-md-nav-max) {
+        @content;
+    }
+}
+
+/* font + type size helpers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@mixin bodyFont($weight: undefined) {
+    font-family: 'Open Sans', arial, sans-serif;
+
+    @if $weight == bold {
+        font-weight: 700;
+    } @else {
+        font-weight: 400;
+    }
+}
+
+@mixin headerFont($weight: undefined) {
+    font-family: 'Avenir Next', 'Roboto', Helvetica, Arial, sans-serif;
+
+    @if $weight == bold {
+        font-weight: 700;
+    } @else {
+        font-weight: 400;
+    }
+}
+
+@mixin tertiaryFont() {
+    font-family: 'Avenir Next Demi', 'Roboto', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+}
+
+@mixin filterCountText() {
+    .count {
+        @include bodyFont; /* prevent selected state override */
+        color: $charcoal50;
+        font-size: 1.3rem;
+        line-height: 2rem;
+    }
+
+    .zeroCount {
+        color: $charcoal40;
+    }
+}
+
+/* Button + Link Mixins
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+@mixin linkLook() {
+    @include bodyFont('bold');
+    background-color: transparent;
+    border: 0;
+    color: $orchidType60;
+    cursor: pointer;
+    display: inline-block;
+    font-size: inherit;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    vertical-align: baseline;
+
+    &.disabled {
+        color: $charcoal45;
+        pointer-events: none;
+    }
+
+    &:visited {
+        color: $charcoal50;
+    }
+
+    &:hover {
+        color: $charcoal70;
+    }
+
+    &:focus {
+        border: 0.2rem solid $focusBlue;
+        text-decoration: none;
+    }
+
+    .icon {
+        display: inline-block;
+        fill: $black;
+        height: $remSpacing3;
+        overflow: visible;
+        position: relative;
+        top: 2px;
+        width: $remSpacing3;
+    }
+
+    &.iconLeft {
+        .icon {
+            margin-right: $spacing2;
+        }
+    }
+
+    &.iconRight {
+        .icon {
+            margin-left: $spacing2;
+        }
+    }
+
+    .linkIcon {
+        font-size: 1.3rem;
+        margin-right: 0.5rem;
+    }
+
+    .loadingSpinner {
+        display: inline-block;
+        margin-left: 0.2rem;
+    }
+}
+
+@mixin newButtonLook() {
+    align-items: center;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    min-height: 4.4rem;
+    padding: 0;
+    vertical-align: middle;
+    width: 100%;
+
+    @include mqViewportMd {
+        width: auto;
+    }
+
+    .buttonStyle {
+        @include simpleTransition;
+        @include headerFont(bold);
+        background-color: $black;
+        border: 0.1rem solid $black;
+        color: $white;
+        font-size: 1.4rem;
+        letter-spacing: 0.1rem;
+        line-height: 2rem;
+        padding: $remSpacing3 $remSpacing5;
+        position: relative;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+
+        .buttonContent {
+            display: block;
+            margin: auto;
+            max-width: 27rem;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    }
+
+    &:focus {
+        outline: 0.2rem solid $focusBlue;
+    }
+
+    &:disabled,
+    &.disabled {
+        pointer-events: none;
+
+        .buttonStyle {
+            background-color: $charcoal45;
+            border: 0.1rem solid $charcoal45;
+        }
+    }
+
+    &:active > .buttonStyle ,
+    &:hover > .buttonStyle {
+        color: $black;
+    }
+
+    &:hover > .buttonStyle {
+        background-color: $white;
+    }
+
+    &:active > .buttonStyle {
+        background-color: $charcoal20;
+    }
+}
+
+@mixin buttonLook() {
+    @include headerFont(bold);
+    @include simpleTransition;
+    border-radius: 0;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
+    line-height: 2rem;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+        background-color: $charcoal60;
+        border-color: $charcoal60;
+        color: $white;
+    }
+
+    &.full {
+        width: 100%;
+    }
+
+    &.auto {
+        width: 100%;
+
+        @include mqViewportMd {
+            width: auto;
+        }
+    }
+
+    .icon {
+        fill: $white;
+    }
+
+    .buttonContents {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        user-select: none;
+    }
+
+    .loadingSpinner {
+        position: absolute;
+    }
+
+    //sizes
+    &.small {
+        .buttonContents {
+            font-size: 1.3rem;
+            line-height: 1;
+            min-height: calc(#{$remSpacing4} - 2px); // -2px to account for the border
+            padding: $remSpacing2 $remSpacing3;
+
+            span {
+                line-height: 1;
+            }
+        }
+
+        .icon,
+        .btnImg,
+        .googleImg {
+            height: 1.4rem;
+            margin-right: $remSpacing2;
+            width: 1.4rem;
+        }
+    }
+
+    &.medium {
+        .buttonContents {
+            font-size: 1.4rem;
+            line-height: 1;
+            min-height: calc(#{$remSpacing7} - 2px); // -2px to account for the border
+            padding: $remSpacing3;
+
+            span {
+                line-height: 1;
+            }
+        }
+
+        .icon,
+        .btnImg,
+        .googleImg {
+            height: 1.8rem;
+            margin-right: $remSpacing2;
+            width: 1.8rem;
+        }
+    }
+
+    &.large {
+        .buttonContents {
+            font-size: 1.8rem;
+            line-height: 1;
+            min-height: calc(#{$remSpacing9} - 2px); // -2px to account for the border
+            padding: $remSpacing4 $remSpacing6;
+
+            span {
+                line-height: 1;
+            }
+        }
+
+        .icon,
+        .btnImg,
+        .googleImg {
+            height: 2rem;
+            margin-right: $remSpacing2;
+            transform: translateY(1px);
+            width: 2rem;
+        }
+    }
+
+    &.primary {
+        background-color: $black;
+        border: 1px solid $black;
+        color: $white;
+
+        &:hover,
+        &:focus {
+            background-color: $orchid30;
+            border-color: $orchid30;
+            color: $black;
+
+            .icon {
+                fill: $black;
+            }
+        }
+
+        .icon {
+            fill: $white;
+        }
+
+        &.disabled {
+            background-color: $charcoal40;
+            border-color: $charcoal40;
+            color: $white;
+            cursor: not-allowed;
+            pointer-events: none;
+
+            &:hover {
+                background-color: $charcoal40;
+                border-color: $charcoal40;
+                color: $white;
+                cursor: not-allowed;
+                pointer-events: none;
+            }
+
+            .icon {
+                fill: $white;
+            }
+        }
+    }
+
+    &.secondary {
+        background-color: $white;
+        border: 1px solid $black;
+        color: $black;
+
+        &:hover,
+        &:focus {
+            background-color: $orchid10;
+        }
+
+        .icon {
+            fill: $black;
+        }
+
+        &.disabled {
+            border-color: $charcoal40;
+            color: $charcoal40;
+            cursor: not-allowed;
+            pointer-events: none;
+
+            &:hover {
+                border-color: $charcoal40;
+                color: $charcoal40;
+                cursor: not-allowed;
+                pointer-events: none;
+            }
+
+            .icon {
+                fill: $charcoal40;
+            }
+        }
+    }
+
+    &.tertiary {
+        background-color: $transparentDark00;
+        border: 1px solid $transparentDark00;
+        color: $black;
+
+        &:hover,
+        &:focus {
+            background-color: $charcoal20;
+            border-color: $charcoal20;
+        }
+
+        .icon {
+            fill: $black;
+        }
+
+        &.disabled {
+            background-color: $transparentDark00;
+            border-color: $transparentDark00;
+            color: $charcoal40;
+            cursor: not-allowed;
+            pointer-events: none;
+
+            &:hover {
+                background-color: $transparentDark00;
+                border-color: $transparentDark00;
+                color: $charcoal40;
+                cursor: not-allowed;
+                pointer-events: none;
+            }
+
+            .icon {
+                fill: $charcoal40;
+            }
+        }
+    }
+
+    &.primaryOnDark {
+        background-color: $white;
+        border: 1px solid $white;
+        color: $black;
+
+        &:hover,
+        &:focus {
+            background-color: $orchid30;
+            border-color: $orchid30;
+        }
+
+        .icon {
+            fill: $black;
+        }
+
+        &.disabled {
+            background-color: $charcoal50;
+            border-color: $charcoal50;
+            color: $black;
+            cursor: not-allowed;
+            pointer-events: none;
+
+            &:hover {
+                background-color: $charcoal50;
+                border-color: $charcoal50;
+                color: $black;
+                cursor: not-allowed;
+                pointer-events: none;
+            }
+
+            .icon {
+                fill: $black;
+            }
+        }
+    }
+
+    &.secondaryOnDark {
+        background-color: $transparentDark00;
+        border: 1px solid $white;
+        color: $white;
+
+        &:hover,
+        &:focus {
+            background-color: $orchid10;
+            color: $black;
+
+            .icon {
+                fill: $black;
+            }
+        }
+
+        .icon {
+            fill: $white;
+        }
+
+        &.disabled {
+            background-color: $black;
+            border-color: $charcoal50;
+            color: $charcoal50;
+            cursor: not-allowed;
+            pointer-events: none;
+
+            &:hover {
+                background-color: $black;
+                border-color: $charcoal50;
+                color: $charcoal50;
+                cursor: not-allowed;
+                pointer-events: none;
+            }
+
+            .icon {
+                fill: $charcoal50;
+            }
+        }
+    }
+
+    &.tertiaryOnDark {
+        background-color: $charcoal60;
+        border: 1px solid $charcoal60;
+        color: $transparentLight80;
+    }
+
+    &.teal.teal {
+        background-color: $teal40;
+        border: 1px solid $teal40;
+        color: $white;
+        text-shadow: 1px 1px 3px $teal40; // Aid white text rendering on hover
+
+        &:hover,
+        &:focus {
+            background-color: $teal30;
+            color: $white;
+
+            .icon {
+                fill: $white;
+            }
+        }
+
+        .icon {
+            fill: $white;
+        }
+    }
+
+    //types
+    &.paypal,
+    &.paypal:hover {
+        background-color: $paypal;
+        border: 1px solid $paypal;
+        color: $white;
+
+        .icon {
+            fill: $white;
+        }
+    }
+
+    &.facebook,
+    &.facebook:hover {
+        background-color: $facebook;
+        border: 1px solid $facebook;
+        color: $white;
+
+        .icon {
+            fill: $white;
+            height: 1.4rem;
+            width: 1.4rem;
+        }
+    }
+
+    &.google,
+    &.google:hover {
+        background-color: $google;
+        border: 1px solid $google;
+        color: $white;
+
+        .icon {
+            fill: $white;
+            height: 2.2rem;
+            width: 2.2rem;
+        }
+    }
+
+    &.append-left {
+        border-right-width: 0;
+        margin-right: -1px;
+    }
+
+    &.append-right {
+        border-left-width: 0;
+    }
+}
+
+/* Helpful Mixins
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+//scroll horizontally on mobile
+@mixin overflowScroll() {
+    align-items: flex-start;
+    display: flex;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 1.2rem;
+    position: relative;
+}
+
+@mixin verticalAlign() {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin horizontalAlign() {
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+}
+
+@mixin absoluteCenter() {
+    left: 50%;
+    position: relative;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin clearFix() {
+    &::before {
+        content: '';
+        display: block;
+    }
+
+    &::after {
+        clear: both;
+        content: '';
+        display: table;
+    }
+}
+
+// Crop images to the aspect ratio you specify
+// Example usage: @include aspectRatio(4, 3);
+// Whatever you're cropping needs the class "content"
+@mixin aspectRatio($width, $height, $backgroundColor: $charcoal30) {
+    background-color: $backgroundColor;
+    overflow: hidden;
+    padding-top: ($height / $width) * 100%;
+    position: relative;
+    width: 100%;
+
+    > .content {
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
+
+@mixin pageMargin() {
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+
+//checklists - pulled out of ldpElements
+@mixin checklist() {
+    .checklist {
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            align-items: flex-start;
+            color: $charcoal50;
+            display: flex;
+            margin: 0 0.6rem 1rem 0;
+            padding: 0;
+            width: 100%;
+
+            .icon {
+                fill: $charcoal50;
+                height: 1.6rem;
+                margin: $spacing1 1.6rem 0 0;
+                min-width: 1.6rem;
+                width: 1.6rem;
+            }
+        }
+    }
+}
+
+/* Animations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+$defaultDuration: 0.25s; // default transition
+
+@mixin simpleTransition($property: all, $duration: $defaultDuration) {
+    animation-fill-mode: both;
+    transition: $property $duration ease-in-out;
+}
+
+@mixin spin($speed: 1500ms) {
+    animation-duration: $speed;
+    animation-iteration-count: infinite;
+    animation-name: spin;
+    animation-timing-function: linear;
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+}
+
+@mixin shake() {
+    animation: shake 150ms 2 linear;
+
+    @keyframes shake {
+        0% {
+            transform: translate(5px, 0);
+        }
+
+        50% {
+            transform: translate(-5px, 0);
+        }
+
+        100% {
+            transform: translate(0, 0);
+        }
+    }
+}
+
+@mixin fadeIn($delay: 0s) {
+    animation: fadeIn 0.15s ease;
+    animation-delay: $delay;
+    animation-fill-mode: both;
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+@mixin fadeInOnLoad($delay: 0s) {
+    animation: fadeInOnLoad 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    animation-delay: $delay;
+    animation-fill-mode: forwards;
+    opacity: 0;
+
+    @keyframes fadeInOnLoad {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+@mixin slideUp($delay: 0s, $duration: 0.4s) {
+    animation: slideUp $duration cubic-bezier(0.645, 0.045, 0.355, 1);
+    animation-delay: $delay;
+    animation-fill-mode: forwards;
+
+    @keyframes slideUp {
+        0% {
+            bottom: -100%;
+        }
+
+        100% {
+            bottom: 0;
+        }
+    }
+}
+
+@mixin slideDown($delay: 0s, $duration: 0.4s) {
+    animation: slideDown $duration cubic-bezier(0.645, 0.045, 0.355, 1);
+    animation-delay: $delay;
+    animation-fill-mode: forwards;
+
+    @keyframes slideDown {
+        0% {
+            bottom: 0;
+        }
+
+        100% {
+            bottom: -100%;
+        }
+    }
+}
+
+@mixin favorite() {
+    animation-duration: 0.5s;
+    animation-name: favorite;
+
+    @keyframes favorite {
+        0% {
+            fill: $orchid50;
+        }
+
+        50% {
+            fill: $orchidType70;
+            transform: scale(1.2) rotate(-3deg);
+        }
+
+        100% {
+            fill: $orchid50;
+        }
+    }
+}
+
+@mixin pulsate($speed: 1500ms) {
+    animation-duration: $speed;
+    animation-iteration-count: infinite;
+    animation-name: pulsate;
+    animation-timing-function: linear;
+
+    @keyframes pulsate {
+        0% {
+            opacity: 1;
+        }
+
+        33% {
+            opacity: 0.5;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+@mixin indeterminateProgress {
+    animation: indeterminate 1.2s cubic-bezier(0.6, 0.9, 0.75, 0.4) infinite;
+
+    @keyframes indeterminate {
+        0% {
+            transform: translateX(-100%);
+        }
+
+        100% {
+            transform: translateX(140%);
+        }
+    }
+}
