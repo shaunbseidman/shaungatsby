@@ -13,6 +13,7 @@ const SectionCaption = styled.div`
   text-transform: uppercase;
   color: #94A4BA;
   text-align: center;
+  margin-top: 2rem;
 `
 
 const SectionCellGroup = styled.div`
@@ -22,8 +23,9 @@ const SectionCellGroup = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 20px;
+  color: white;
 
-  @media (max-width: 800px) {
+  @media (max-width: 560px) {
     grid-template-columns: repeat(1, 1fr);
   }
 `
@@ -41,14 +43,6 @@ const IndexPage = () => (
         <p>Front End Developer</p>
         <p>blah blah blah more text will go here hopefully</p>
         <Link className="HeroLink" to="/video">Let's Chat!</Link>
-        <div className="Logos">
-          <img src={require('../images/gatsby-astronaut.png')} width="50" />
-          <img src={require('../images/gatsby-astronaut.png')} width="50" />
-          <img src={require('../images/gatsby-astronaut.png')} width="50" />
-          <img src={require('../images/gatsby-astronaut.png')} width="50" />
-          <img src={require('../images/gatsby-astronaut.png')} width="50" />
-          <img src={require('../images/gatsby-astronaut.png')} width="50" />
-        </div>
         <svg width="100%" height="172" viewBox="0 0 100% 172" fill="none">
         <path fill="white">
           <animate repeatCount="indefinite" fill="freeze" attributeName="d" dur="10s"
