@@ -2,15 +2,15 @@
     "skills": [
         {
             "title": "Javascript",
-            "image": "https://cl.ly/1U1F170x3D0L/download/logo-react-small.png"
+            "image": "https://cdn.worldvectorlogo.com/logos/javascript.svg"
         },
         {
             "title": "SASS",
-            "image": "https://cl.ly/1U1F170x3D0L/download/logo-react-small.png"
+            "image": "https://d29fhpw069ctt2.cloudfront.net/icon/image/38569/preview.svg"
         },
         {
             "title": "LESS",
-            "image": "https://cl.ly/1U1F170x3D0L/download/logo-react-small.png"
+            "image": "https://cdn2.iconfinder.com/data/icons/designer-skills/128/less-512.png"
         },
         {
             "title": "React",
@@ -18,35 +18,35 @@
         },
         {
             "title": "Handlebars",
-            "image": "https://cl.ly/1U1F170x3D0L/download/logo-react-small.png"
+            "image": "https://i0.wp.com/blog.fossasia.org/wp-content/uploads/2017/07/handlebars-js.png?fit=500%2C500&ssl=1"
         },
         {
             "title": "Vue",
-            "image": "https://cl.ly/1U1F170x3D0L/download/logo-react-small.png"
+            "image": "https://vuejs.org/images/logo.png"
         },
         {
             "title": "CMS",
-            "image": "https://cl.ly/1U1F170x3D0L/download/logo-react-small.png"
+            "image": "https://jjwebservices-89c1.kxcdn.com/wp-content/uploads/2013/07/GraphicForContentManagementSystemPage.png"
         },
         {
             "title": "Styled Components",
-            "image": "https://cl.ly/1U1F170x3D0L/download/logo-react-small.png"
+            "image": "https://styled-components.com/logo.png"
         },
         {
             "title": "Git",
-            "image": "https://cl.ly/1U1F170x3D0L/download/logo-react-small.png"
+            "image": "https://git-scm.com/images/logos/downloads/Git-Icon-Black.png"
         },
         {
             "title": "Gatsby",
-            "image": "https://cl.ly/1U1F170x3D0L/download/logo-react-small.png"
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTNF5V9khSdc6q8fmqTiFOuvsQRmpJECK-LBXH1b4mhA0wgD5-9&usqp=CAU"
         },
         {
             "title": "Node",
-            "image": "https://cl.ly/1U1F170x3D0L/download/logo-react-small.png"
+            "image": "https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_f0b606abb6d19089febc9faeeba5bc05/nodejs-development-services.png"
         },
         {
             "title": "Learning",
-            "image": "https://cl.ly/1U1F170x3D0L/download/logo-react-small.png"
+            "image": "https://cdn3.iconfinder.com/data/icons/popular-services-brands-vol-2/512/stackoverflow-512.png"
         }
     ]
 }

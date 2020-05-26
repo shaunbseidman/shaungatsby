@@ -3,12 +3,7 @@ import { Link } from "gatsby"
 import Card from '../components/card';
 import data from '../../data.json'
 import styled from 'styled-components'
-
-
-
 import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
 import Section from "../components/section";
 import Skills from "../components/skills";
 
@@ -33,9 +28,14 @@ const SectionCellGroup = styled.div`
   }
 `
 
+if (typeof window !== "undefined") {
+  // eslint-disable-next-line global-require
+  require("smooth-scroll")('a[href*="#"]')
+}
+
 const IndexPage = () => (
   <Layout>
-    <div className="Hero">
+    <div className="Hero" id="home">
       <div className="HeroGroup">
         <h1>Hi I'm Shaun</h1>
         <p>Front End Developer</p>
@@ -60,7 +60,7 @@ const IndexPage = () => (
       </svg>
       </div>
     </div>
-    <div className="Cards">
+    <div className="Cards" id="work">
       <h2>My Work</h2>
         <div className="CardGroup">
         <Card 
@@ -85,12 +85,14 @@ const IndexPage = () => (
         image={require('../images/Planes10.png')} />
         </div>
       </div>
+      <div id="about">
       <Section
         image={require('../images/Planes10.png')}
         logo={require('../images/Planes10.png')}
-        title="yeah boyyyyyy"
-        text="blah blah"
+        title="About me"
+        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. "
       />
+      </div>
       <SectionCaption>Skills</SectionCaption>
       <SectionCellGroup>
       {data.skills.map(skill => (

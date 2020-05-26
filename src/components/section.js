@@ -81,8 +81,7 @@ const Section = props => (
             <SectionTitle>{props.title}</SectionTitle>
             <SectionText>{props.text}</SectionText>
         </SectionTitleGroup>
-        <WaveBottom><Wave /></WaveBottom>
-        <WaveTop><Wave /></WaveTop>
+   
     </SectionGroup>
 )
 
