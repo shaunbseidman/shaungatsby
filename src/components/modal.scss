@@ -1,13 +1,20 @@
+@import 'src/styles/mixins';
+
 .modal {
     justify-content: center;
     height: 100%;
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
+    left: 20%;
+    right: 20%;
     z-index: 10000;
     background: rgba(0,0,0,.6);
     visibility: visible;
+
+    @include mqViewportMobile {
+      left: 0;
+      right: 0;
+    }
 
 
     &.off {

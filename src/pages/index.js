@@ -78,6 +78,8 @@ class IndexPage extends React.Component{
           title={project.title}
           image={project.image}
           buttonText={project.buttonText}
+          modalHeader={project.modalHeader}
+          modalStack={project.modalStack}
           modalText={project.modalText}
           modalImage={project.modalImage}
           />
