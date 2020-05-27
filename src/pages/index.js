@@ -63,7 +63,7 @@ class IndexPage extends React.Component{
               <span className="loopedText">attempting to vacuum more</span>
             </TextLoop>
           </p>
-          <Link className="HeroLink" to="/video">Let's Chat!</Link>
+          <Link className="HeroLink" to="/resume">Let's Chat!</Link>
           <svg width="100%" height="172" viewBox="0 0 100% 172" fill="none">
           <path fill="white">
           </path>

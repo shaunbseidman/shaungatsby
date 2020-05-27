@@ -1,7 +1,6 @@
 import React from 'react'
 import './card.scss'
 import Modal from "../components/modal"
-import styled from 'styled-components'
 
 class Card extends React.Component {
     constructor(props) {
