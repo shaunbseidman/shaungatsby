@@ -2,48 +2,60 @@
     "projects": [
         {
             "title": "Mobile Navigation",
-            "modalText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "modalText": "Moved the navigation menu out of Bluprint's CMS into it's own microservice so both the Handlebars and React stack can point it. Worked in conjunction with product and UX to design and build the new mobile navigation and hamburger menu contents",
             "buttonText": "View More",
             "modalHeader": "Mobile Navigation",
             "modalStack": "JavaScript SASS",
-            "image": "https://i.ibb.co/vB5yV06/Screen-Shot-2020-05-27-at-9-38-36-AM.png",
-            "modalImage": "https://i.ibb.co/vB5yV06/Screen-Shot-2020-05-27-at-9-38-36-AM.png"
+            "image": "https://gdurl.com/ElMp",
+            "modalImage": "https://gdurl.com/nafX"
         },
         {
             "title": "Techniques",
-            "modalText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "modalText": "Created CMS driven template for merchandisers to write customer facing reference pages. Created new module that houses text and internal/external video. Ensured that schema was implemented for SEO purposes",
             "buttonText": "View More",
             "modalHeader": "Techniques",
             "modalStack": "Handlebars React JavaScript LESS CMS",
-            "image": "https://i.ibb.co/FVm7B7Q/techniques.png",
-            "modalImage": "https://i.ibb.co/FVm7B7Q/techniques.png"
+            "image": "https://gdurl.com/56Dt",
+            "secondaryImage": "https://gdurl.com/GigS",
+            "modalImage": "https://gdurl.com/56Dt"
         },
         {
             "title": "Instructor Dashboard",
-            "modalText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "buttonText": "View More",
+            "modalText": "Created user interface for instructor's to be able to select a single or bulk delete questions",
             "modalHeader": "Instructor Dashboard",
+            "buttonText": "View More",
             "modalStack": "React JavaScript SASS",
-            "image": "https://i.ibb.co/fXTpbLF/Screen-Shot-2020-05-27-at-9-44-14-AM.png",
-            "modalImage": "https://i.ibb.co/fXTpbLF/Screen-Shot-2020-05-27-at-9-44-14-AM.png"
+            "image": "https://gdurl.com/ooAb",
+            "secondaryImage": "https://gdurl.com/WMfL",
+            "modalImage": "https://gdurl.com/ooAb"
         },
         {
             "title": "Alerts",
-            "modalText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "modalText": "Created new site hats that would display based on multiple user states in regards to payment or an ending subscription",
             "buttonText": "View More",
             "modalHeader": "Alerts",
             "modalStack": "Handlebars React JavaScript LESS CMS",
-            "image": "https://i.ibb.co/7NNC2BB/image-2.png",
-            "modalImage": "https://i.ibb.co/7NNC2BB/image-2.png"
+            "image": "https://gdurl.com/geIp",
+            "modalImage": "https://gdurl.com/geIp"
         },
         {
             "title": "Steadbrook",
-            "modalText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "modalText": "UI consultation as well implementing a new custom Liquid theme. Refactored mobile experience, hamburger menu and mobile search/sorting",
             "buttonText": "View More",
             "modalHeader": "Steadbrook",
             "modalStack": "Liquid JavaScript HTML Shopify",
-            "image": "https://i.ibb.co/CKkFzFt/Screen-Shot-2020-05-27-at-9-40-45-AM.png",
-            "modalImage": "https://i.ibb.co/G7J4BD7/Steadbrook.png"
+            "image": "https://gdurl.com/Ad5H",
+            "secondaryImage": "https://gdurl.com/AbRC",
+            "modalImage": "https://gdurl.com/Ad5H"
+        },
+        {
+            "title": "THIS",
+            "modalText": "how meta",
+            "buttonText": "View More",
+            "modalHeader": "THIS",
+            "modalStack": "React Gatsby Javascript Netlify SASS StyledComponents HTML Shopify",
+            "image": "https://gdurl.com/Eezf",
+            "modalImage": "https://gdurl.com/Eezf"
         }
     ]
 }

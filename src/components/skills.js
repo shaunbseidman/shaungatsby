@@ -10,15 +10,15 @@ const CellGroup = styled.div`
 `
 
 const CellImage = styled.div`
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     border-radius: 10px;
     background-image: url(${props => props.image});
-    background-size: 60px;
+    background-size: 40px;
 `
 
 const CellTitle = styled.div`
-    font-size: 24px;
+    font-size: 1.8rem;
     border-bottom: 1px solid rgba(0,0,0, 0.1);
     padding: 30px 0;
 `

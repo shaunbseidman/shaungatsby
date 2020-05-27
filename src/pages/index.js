@@ -63,7 +63,6 @@ class IndexPage extends React.Component{
               <span className="loopedText">attempting to vacuum more</span>
             </TextLoop>
           </p>
-          <Link className="HeroLink" to="/resume">Let's Chat!</Link>
           <svg width="100%" height="172" viewBox="0 0 100% 172" fill="none">
           <path fill="white">
           </path>
@@ -74,16 +73,17 @@ class IndexPage extends React.Component{
         <h2>Projects</h2>
           <div className="CardGroup">
           {projects.projects.map(project => (
-          <Card 
-          title={project.title}
-          image={project.image}
-          buttonText={project.buttonText}
-          modalHeader={project.modalHeader}
-          modalStack={project.modalStack}
-          modalText={project.modalText}
-          modalImage={project.modalImage}
-          />
-        ))}
+            <Card 
+            title={project.title}
+            image={project.image}
+            buttonText={project.buttonText}
+            modalHeader={project.modalHeader}
+            modalStack={project.modalStack}
+            modalText={project.modalText}
+            secondaryImage={project.secondaryImage}
+            modalImage={project.modalImage}
+            />
+          ))}
           </div>
         </div>
         <div id="about">
