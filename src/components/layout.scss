@@ -119,7 +119,8 @@ body {
       font-size: 60px;
       text-align: center;
       font-weight: 700;
-      background: linear-gradient(104.74deg, #050A27 0%,#4A548C 100%);
+      color: $white;
+      background: linear-gradient(104.74deg, #ffffff 0%,#4A548C 100%);
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -136,6 +137,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 40px;
     justify-items: center;
+    position: relative;
   }
   
   @media (max-width: 1060px) {

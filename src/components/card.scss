@@ -41,9 +41,32 @@
     }
 }
 
+.fart {
+    width: 100%;
+    left: auto;
+    right: 50%;
+    margin-right: -496px;
+}
+
 .Card:hover {
     transform: scale(1.1, 1.1);
     box-shadow: 0 30px 60px rgba(0,0,0, 0.5);
 }
 
 
+.toggle-button {
+    cursor: pointer;
+    padding: 8px 20px;
+    color: $white;
+
+    &:hover {
+        color: $black;
+        background: $white;
+        border-radius: 10px;
+        box-shadow: 0 10px 20px rgba(0,0,0, 0.25);
+        transform: translateY(-3px);
+        transform: scale(1.1, 1.1);
+        transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1.0);
+    }
+
+  }
