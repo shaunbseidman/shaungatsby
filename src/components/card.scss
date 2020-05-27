@@ -13,10 +13,17 @@
     cursor: pointer;
 
     .header {
-        color: white;
         font-size: 30px;
         margin: 20px 0 0 20px;
         width: 190px;
+        color: $black;
+        background: rgba(187,187,187,0.8);
+        border-radius: 10px;
+        box-shadow: 0 10px 20px rgba(0,0,0, 0.25);
+        transform: translateY(-3px);
+        transform: scale(1.1, 1.1);
+        transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1.0);
+        padding: 8px 20px;
     }
 
     .text {
@@ -30,6 +37,7 @@
 
     .image {
         height: 110%;
+        width: 100%;
         position: absolute;
         top: 0;
         z-index: -1;
@@ -57,16 +65,20 @@
 .toggle-button {
     cursor: pointer;
     padding: 8px 20px;
-    color: $white;
+    color: $black;
 
     &:hover {
         color: $black;
-        background: $white;
+        background: rgba(187,187,187,0.8);
         border-radius: 10px;
         box-shadow: 0 10px 20px rgba(0,0,0, 0.25);
         transform: translateY(-3px);
         transform: scale(1.1, 1.1);
         transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1.0);
     }
+  }
 
+  .modalImage {
+      height: 80%;
+      width: 80%;
   }

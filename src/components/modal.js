@@ -3,6 +3,9 @@ import PropTypes from "prop-types";
 import './modal.scss'
 
 export default class Modal extends React.Component {
+    constructor(props) {
+        super(props)
+    }
   onClose = e => {
     this.props.onClose && this.props.onClose(e);
   };
@@ -12,12 +15,12 @@ export default class Modal extends React.Component {
     }
     return (
       <div class="modal" id="modal">
-        <div class="content">{this.props.children}</div>
+        <div class="content"></div>
         <div class="actions">
-          <button class="toggle-button" onClick={this.onClose}>
+            <button class="toggle-button" onClick={this.onClose}>
             close
-          </button>
-            <div class="photo"><img src={this.props.image} width="100%" /></div>
+            </button>
+            {this.props.children}
         </div>
       </div>
     );

@@ -1,24 +1,23 @@
 import React from 'react'
 import './card.scss'
 import Modal from "../components/modal"
-
-
+import styled from 'styled-components'
 
 class Card extends React.Component {
     constructor(props) {
         super(props)
-    
+
         this.state = {
             show: false
         }
 
     }
-    
     showModal = e => {
         this.setState({
           show: !this.state.show
         });
       };
+
       render () {
           return (
             <div className="crap">
@@ -38,6 +37,8 @@ class Card extends React.Component {
                 </div>
                 <Modal onClose={this.showModal} show={this.state.show}>
                     <div className="fart">
+                        <div className="modalText">{this.props.modalText}</div>
+                        <img className="modalImage" src={this.props.modalImage}></img>
                     </div>
                 </Modal>
             </div>

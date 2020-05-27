@@ -1,0 +1,39 @@
+{
+    "projects": [
+        {
+            "title": "Mobile Navigation",
+            "modalText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "buttonText": "View More",
+            "image": "https://i.ibb.co/vB5yV06/Screen-Shot-2020-05-27-at-9-38-36-AM.png",
+            "modalImage": "https://i.ibb.co/vB5yV06/Screen-Shot-2020-05-27-at-9-38-36-AM.png"
+        },
+        {
+            "title": "Techniques",
+            "modalText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "buttonText": "View More",
+            "image": "https://i.ibb.co/FVm7B7Q/techniques.png",
+            "modalImage": "https://i.ibb.co/FVm7B7Q/techniques.png"
+        },
+        {
+            "title": "Instructor Dashboard",
+            "modalText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "buttonText": "View More",
+            "image": "https://i.ibb.co/fXTpbLF/Screen-Shot-2020-05-27-at-9-44-14-AM.png",
+            "modalImage": "https://i.ibb.co/fXTpbLF/Screen-Shot-2020-05-27-at-9-44-14-AM.png"
+        },
+        {
+            "title": "Alerts",
+            "modalText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "buttonText": "View More",
+            "image": "https://i.ibb.co/7NNC2BB/image-2.png",
+            "modalImage": "https://i.ibb.co/7NNC2BB/image-2.png"
+        },
+        {
+            "title": "Steadbrook",
+            "modalText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "buttonText": "View More",
+            "image": "https://i.ibb.co/CKkFzFt/Screen-Shot-2020-05-27-at-9-40-45-AM.png",
+            "modalImage": "https://i.ibb.co/G7J4BD7/Steadbrook.png"
+        }
+    ]
+}
