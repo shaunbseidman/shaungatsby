@@ -7,6 +7,7 @@ import Layout from "../components/layout"
 import Section from "../components/section";
 import Skills from "../components/skills";
 import projects from '../../projects.json'
+import TextLoop from "react-text-loop";
 
 const SectionCaption = styled.div`
   font-weight: 600;
@@ -50,8 +51,18 @@ class IndexPage extends React.Component{
       <div className="Hero" id="home">
         <div className="HeroGroup">
           <h1>Hi I'm Shaun</h1>
-          <p>Front End Developer</p>
-          <p>blah blah blah more text will go here hopefully</p>
+          <p>
+            I am {" "}
+            <TextLoop>
+              <span className="loopedText">a front end developer</span>
+              <span className="loopedText">a builder</span>
+              <span className="loopedText">a learner</span>
+              <span className="loopedText">a reader</span>
+              <span className="loopedText">a dog person</span>
+              <span className="loopedText">a coffee drinker</span>
+              <span className="loopedText">attempting to vacuum more</span>
+            </TextLoop>
+          </p>
           <Link className="HeroLink" to="/video">Let's Chat!</Link>
           <svg width="100%" height="172" viewBox="0 0 100% 172" fill="none">
           <path fill="white">
