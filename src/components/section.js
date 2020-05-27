@@ -19,9 +19,14 @@ const SectionGroup = styled.div`
 `
 
 const SectionLogo = styled.img`
-    width: 128px;
+    height: 256px;
+    width: 252px;
     margin: 0 auto;
     align-self: end;
+    border-top-left-radius: 50% 50%;
+    border-top-right-radius: 50% 50%;
+    border-bottom-right-radius: 50% 50%;
+    border-bottom-left-radius: 50% 50%;
 `
 
 const SectionTitleGroup = styled.div`

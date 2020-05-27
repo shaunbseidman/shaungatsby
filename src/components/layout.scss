@@ -15,6 +15,38 @@ body {
     font-weight: 600;
   }
 
+  .footer {
+    color: $charcoal30;
+    background: rgba(0, 0, 0, 0.3);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+  }
+
+  .socialButtons {
+    display: flex;
+    margin-top: 0.5rem;
+    margin-left: .2rem;
+    margin-bottom: 0.5rem;
+  
+    svg {
+      height: 2em;
+      width: 2em;
+      fill: $white;
+      transition: all .15s linear;
+    }
+    a {
+      flex-basis: 2em;
+      border-radius: 10px;
+      padding-right: 1.5em;
+
+      &:hover {
+        svg {
+          fill: $charcoal30;
+        }
+      }
+    }
+  }
+
   .Hero {
     background: url(../images/Topography3.png);
     height: 920px;

@@ -76,12 +76,12 @@ class IndexPage extends React.Component{
         <div id="about">
         <Section
           image={require('../images/Planes10.png')}
-          logo={require('../images/Planes10.png')}
-          title="About me"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. "
+          logo={require('../images/me.jpeg')}
+          title="About me:"
+          text="Thanks for taking a look. I am a front end developer with a passion for creating intuitive user interfaces and problem solving. I believe in the marriage of design and business logic to achieve an exceptional user-facing product."
         />
         </div>
-        <SectionCaption>Skills</SectionCaption>
+        <SectionCaption>My Skillset:</SectionCaption>
         <SectionCellGroup>
         {data.skills.map(skill => (
           <Skills 
