@@ -32,7 +32,7 @@ const Resume = () => (
         <Link to="#home">
             <BackArrow src={require('../images/back.png')}></BackArrow>
         </Link>
-        <ResumeContainer className="resume"><ResumeContent src={require('../images/ShaunSeidmanResume-1.png')}/></ResumeContainer>
+        <ResumeContainer className="resume"><ResumeContent src={require('../images/ShaunSeidman.png')}/></ResumeContainer>
     </div>
 )
 
