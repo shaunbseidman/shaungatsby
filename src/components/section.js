@@ -5,7 +5,7 @@ import Wave from './Wave'
 
 const SectionGroup = styled.div`
     margin: 100px 0 0;
-    background: url(${props => props.image});
+    background: url('https://gdurl.com/S9ts');
     background-size: cover;
     height: 720px;
     display: grid;
@@ -82,7 +82,7 @@ const WaveBottom = styled.div`
 `
 
 const Section = props => (
-    <SectionGroup image={props.image}>
+    <SectionGroup >
         <SectionLogo src={props.logo} />
         <SectionTitleGroup>
             <SectionTitle>{props.title}</SectionTitle>
