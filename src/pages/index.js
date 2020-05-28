@@ -8,16 +8,15 @@ import Section from "../components/section";
 import Skills from "../components/skills";
 import projects from '../../projects.json'
 import TextLoop from "react-text-loop";
+import Modal from "../components/modal"
+
 
 const SectionCaption = styled.div`
-  font-weight: 600;
   font-size: 18px;
-  text-transform: uppercase;
-  color: #94A4BA;
+  font-weight: 400;
+  color: white;
   text-align: center;
   margin-top: 2rem;
-  background: linear-gradient(104.74deg, #ffffff 0%, #4A548C 100%);  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   font-size: 4rem;
 
   @media (max-width: 560px) {
@@ -45,6 +44,19 @@ if (typeof window !== "undefined") {
 }
 
 class IndexPage extends React.Component{
+  constructor() {
+    super()
+
+    this.state = {
+        show: false
+    }
+
+}
+  showForm = e => {
+    this.setState({
+      show: !this.state.show
+    });
+  };
   render () {
     return (
     <Layout>
@@ -63,6 +75,34 @@ class IndexPage extends React.Component{
               <span className="loopedText">attempting to vacuum more</span>
             </TextLoop>
           </p>
+          <div className="HeroLink"
+          onClick={e => {
+             this.showForm(e);
+          }}>Let's Chat!</div>
+          <Modal onClose={this.showForm} show={this.state.show}>
+
+          <form className="emailForm" name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+            <p>
+              <label>Your Name: <input type="text" name="name" placeholder="Who are you"/></label>
+            </p>
+            <p>
+              <label>Your Email: <input type="email" name="email" /></label>
+            </p>
+            <p>
+              <label>Your Role: <select name="role[]" multiple>
+                <option value="leader">Leader</option>
+                <option value="follower">Follower</option>
+              </select></label>
+            </p>
+            <p>
+              <label>Message: <textarea name="message"></textarea></label>
+            </p>
+            <p>
+              <button type="submit">Send</button>
+            </p>
+            <input type="hidden" name="form-name" value="contact" />
+          </form>
+          </Modal>
           <svg width="100%" height="172" viewBox="0 0 100% 172" fill="none">
           <path fill="rgb(33, 44, 79)">
           <animate repeatCount="indefinite" fill="freeze" attributeName="d" dur="10s"	
