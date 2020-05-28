@@ -14,7 +14,7 @@
             "modalText": "Created CMS driven template for merchandisers to write customer facing reference pages. Created new module that houses text and internal/external video. Ensured that schema was implemented for SEO purposes",
             "buttonText": "View More",
             "modalHeader": "Techniques",
-            "modalStack": "Handlebars React JavaScript LESS CMS",
+            "modalStack": "Handlebars JavaScript LESS CMS",
             "image": "https://gdurl.com/56Dt",
             "secondaryImage": "https://gdurl.com/GigS",
             "modalImage": "https://gdurl.com/56Dt"
@@ -24,7 +24,7 @@
             "modalText": "Created user interface for instructor's to be able to select a single or bulk delete questions",
             "modalHeader": "Instructor Dashboard",
             "buttonText": "View More",
-            "modalStack": "React JavaScript SASS",
+            "modalStack": "React Redux JavaScript SASS",
             "image": "https://gdurl.com/ooAb",
             "secondaryImage": "https://gdurl.com/WMfL",
             "modalImage": "https://gdurl.com/ooAb"
@@ -34,7 +34,7 @@
             "modalText": "Created new site hats that would display based on multiple user states in regards to payment or an ending subscription",
             "buttonText": "View More",
             "modalHeader": "Alerts",
-            "modalStack": "Handlebars React JavaScript LESS CMS",
+            "modalStack": "Handlebars JavaScript LESS CMS",
             "image": "https://gdurl.com/geIp",
             "modalImage": "https://gdurl.com/geIp"
         },

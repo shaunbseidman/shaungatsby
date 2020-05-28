@@ -24,9 +24,9 @@ body {
 
   .socialButtons {
     display: flex;
-    margin-top: 0.5rem;
+    margin-top: 0.9rem;
     margin-left: .2rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.9rem;
 
     svg {
       height: 2em;
@@ -38,18 +38,17 @@ body {
       flex-basis: 2em;
       border-radius: 10px;
       padding-right: 1.5em;
-
-      &:hover {
-        svg {
-          fill: $charcoal30;
-        }
-      }
     }
+
+    &:hover {
+      transform: translateY(-3px);
+      transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1.0);
+  }
   }
 
   .Hero {
     background: url('https://gdurl.com/Jh32');
-    height: 502px;
+    height: 700px;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -154,12 +153,8 @@ body {
       margin: 50px 20px;
       font-size: 60px;
       text-align: center;
-      font-weight: 700;
-      color: $white;
-      background: linear-gradient(104.74deg, #ffffff 0%,#4A548C 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
+      font-weight: 400;
+      color: $charcoal30;
 
       @include mqViewportMobile {
           font-size: 30px;

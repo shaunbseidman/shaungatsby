@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `My personal website.`,
-    author: `@gatsbyjs`,
+    title: `Shaun Seidman`,
+    description: `Shaun Seidman`,
+    author: `Shaun Seidman`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -24,6 +24,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
+        icon: `src/images/SSLogo.png`
       },
     },
     `gatsby-plugin-sass`,

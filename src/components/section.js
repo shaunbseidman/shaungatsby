@@ -7,7 +7,7 @@ const SectionGroup = styled.div`
     margin: 100px 0 0;
     background: url('https://gdurl.com/S9ts');
     background-size: cover;
-    height: 720px;
+    height: 626px;
     display: grid;
     grid-template-rows: 300px auto;
     grid-gap: 20px;
@@ -52,9 +52,8 @@ const SectionTitleGroup = styled.div`
 `
 
 const SectionTitle = styled.h3`
-    background: -webkit-linear-gradient(#eee, #333);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-weight: 400;
+    color: white;
     font-size: 60px;
     margin: 0;
     line-height: 1.2;
