@@ -75,14 +75,10 @@ class IndexPage extends React.Component{
               <span className="loopedText">attempting to vacuum more</span>
             </TextLoop>
           </p>
-          <div className="HeroLink">
-            <div
-            onClick={e => {
+          <span className="HeroLink"
+          onClick={e => {
              this.showForm(e);
-            }}>
-            Let's Get In Touch
-            </div>
-          </div>
+          }}>Let's Get In Touch</span>
           <Modal onClose={this.showForm} show={this.state.show}>
           <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
             <h4>I'll get back to you ASAP (I mean it)</h4>
