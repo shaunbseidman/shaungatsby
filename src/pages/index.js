@@ -79,29 +79,27 @@ class IndexPage extends React.Component{
           onClick={e => {
              this.showForm(e);
           }}>Let's Chat!</div>
+          <form className="emailForm" name="contact" method="POST" data-netlify="true">
+  <p>
+    <label>Your Name: <input type="text" name="name" /></label>   
+  </p>
+  <p>
+    <label>Your Email: <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <label>Your Role: <select name="role[]" multiple>
+      <option value="leader">Leader</option>
+      <option value="follower">Follower</option>
+    </select></label>
+  </p>
+  <p>
+    <label>Message: <textarea name="message"></textarea></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
           <Modal onClose={this.showForm} show={this.state.show}>
-
-          <form className="emailForm" name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
-            <p>
-              <label>Your Name: <input type="text" name="name" placeholder="Who are you"/></label>
-            </p>
-            <p>
-              <label>Your Email: <input type="email" name="email" /></label>
-            </p>
-            <p>
-              <label>Your Role: <select name="role[]" multiple>
-                <option value="leader">Leader</option>
-                <option value="follower">Follower</option>
-              </select></label>
-            </p>
-            <p>
-              <label>Message: <textarea name="message"></textarea></label>
-            </p>
-            <p>
-              <button type="submit">Send</button>
-            </p>
-            <input type="hidden" name="form-name" value="contact" />
-          </form>
           </Modal>
           <svg width="100%" height="172" viewBox="0 0 100% 172" fill="none">
           <path fill="rgb(33, 44, 79)">
