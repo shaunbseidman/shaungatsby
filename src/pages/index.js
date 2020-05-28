@@ -78,7 +78,7 @@ class IndexPage extends React.Component{
           <span className="HeroLink"
           onClick={e => {
              this.showForm(e);
-          }}>Let's Get In Touch</span>
+          }}>Let's Chat!</span>
           <Modal onClose={this.showForm} show={this.state.show}>
           <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
             <h4>I'll get back to you ASAP (I mean it)</h4>

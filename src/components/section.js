@@ -5,7 +5,7 @@ import Wave from './Wave'
 
 const SectionGroup = styled.div`
     margin: 100px 0 0;
-    background: url('https://gdurl.com/S9ts');
+    background: url('https://gdurl.com/Jh32');
     background-size: cover;
     height: 626px;
     display: grid;
