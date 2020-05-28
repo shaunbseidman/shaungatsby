@@ -25,18 +25,22 @@
       transform: scale(0.33);
       box-shadow: 1rem 0 0 rgba(black, 0.2);
     }
+
     @media (prefers-reduced-motion) {
       offset-path: none;
     }
+
     h2 {
       border-bottom: 1px solid #ccc;
       padding: 1rem;
       margin: 0;
       background-color: red;
     }
+
     .content {
       padding: 1rem;
     }
+
     .actions {
       display: block;
       position: fixed;

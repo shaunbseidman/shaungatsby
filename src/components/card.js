@@ -39,8 +39,8 @@ class Card extends React.Component {
                         <div className="modalStackText">{this.props.modalStack}</div>
                         <div className="modalText">{this.props.modalText}</div>
                         <div className="modalImages">
-                            <img className="modalImage" src={this.props.modalImage}></img>
-                            <img className="modalImage" src={this.props.secondaryImage}></img>
+                        <img className="modalImage" src={this.props.modalImage}></img>
+                        <img className="modalImage" src={this.props.secondaryImage}></img>
                         </div>
                     </div>
                 </Modal>

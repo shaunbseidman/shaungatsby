@@ -71,12 +71,58 @@ body {
       }
     }
 
-    .formModal {
-      background: green;
-    }
-
     form {
-      background-color: red;
+      height: 100%;
+      overflow: hidden;
+      border-radius: 20px;
+      transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+      background: linear-gradient(357deg,#f7eeee 0%, #e6e6e6 80%);
+      background: -webkit-linear-gradient(357deg,#f7eeee 0%, #e6e6e6 80%);
+      background: -moz-linear-gradient(357deg,#f7eeee 0%, #e6e6e6 80%);
+
+      h4 {
+        margin:5px 0 15px;
+        display:block;
+        font-size:13px;
+      }
+
+      textarea, input {
+        width:80%;
+        border:1px solid $charcoal70;
+        background:#FFF;
+        margin:0 0 5px;
+        padding:10px;
+      }
+
+      textarea {
+        height:100px;
+        max-width:100%;
+        resize:none;
+      }
+
+      fieldset {
+        border: medium none !important;
+        margin: 0 0 10px;
+        min-width: 100%;
+        padding: 0;
+        width: 100%;
+      }
+
+      .formHeader {
+        color: $black;
+      }
+
+      label {
+        color: $black;
+        font-size: 1.2rem;
+      }
+
+      .closeForm {
+        &:hover {
+          transform: scale(1.1, 1.1);
+          transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+      }
     }
 
     h1 {
@@ -100,6 +146,7 @@ body {
     }
 
     .HeroLink {
+      margin-top: 8rem;
       font-size: 17px;
       font-weight: 600;
       color: white;
@@ -109,6 +156,7 @@ body {
       border: 1px solid rgba(255,255,255, 0.25);
       border-radius: 20px;
       transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+      cursor: pointer;
     }
   }
 
@@ -131,7 +179,21 @@ body {
     max-width: 500px;
     padding: 150px 50px;
     text-align: center;
+
+    .modal {
+      .actions {
+        background: #f7eeee;
+        background: linear-gradient(357deg,#f7eeee 0%, #e6e6e6 80%);
+        background: -webkit-linear-gradient(357deg,#f7eeee 0%, #e6e6e6 80%);
+        background: -moz-linear-gradient(357deg,#f7eeee 0%, #e6e6e6 80%);
+        overflow: hidden;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0,0,0, 0.15);
+      transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+    }
   }
+
 
   @include mqViewportMobile {
     .HeroGroup {
