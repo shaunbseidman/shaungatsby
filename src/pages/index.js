@@ -79,14 +79,14 @@ class IndexPage extends React.Component{
           onClick={e => {
              this.showForm(e);
           }}>Let's Chat!</div>
-          <form className="emailForm" name="contact" method="POST" data-netlify="true">
-            <label>Your Name: <input type="text" name="name" placeholder="Your Name" /></label>
+          <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+          <label>Your Name: <input type="text" name="name" placeholder="Your Name" /></label>
             <p>
               <label>Message: <textarea name="message"></textarea></label>
             </p>
-            <p>
           <button>Send</button>
-  </p>
+  <input type="hidden" name="form-name" value="contact" />
+
 </form>
           <Modal onClose={this.showForm} show={this.state.show}>
           </Modal>
