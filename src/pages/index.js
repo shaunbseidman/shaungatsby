@@ -89,12 +89,6 @@ class IndexPage extends React.Component{
                 <input type="text" name="name" placeholder="Your Name"/>
               </fieldset>
               <fieldset>
-                <input type="email" name="email" placeholder="Your Email"/>
-              </fieldset>
-              <fieldset>
-                <input type="email" name="email" placeholder="Your Phone Number (This is HTTPS 😎)"/>
-              </fieldset>
-              <fieldset>
                 <textarea name="message" placeholder="Get In Touch"></textarea>
               </fieldset>
             <button className="closeForm"><h5>Send</h5></button>
