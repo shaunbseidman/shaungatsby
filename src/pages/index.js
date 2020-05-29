@@ -119,7 +119,6 @@ class IndexPage extends React.Component{
         </div>
         <div id="about">
         <Section
-          logo={require('../images/me.jpeg')}
           title="About me:"
           text="Thanks for taking a look. I am a front end developer with a passion for creating intuitive user interfaces and problem solving. I believe in the marriage of design and business logic to achieve an exceptional user-facing product."
         />

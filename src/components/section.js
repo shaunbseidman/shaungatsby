@@ -19,8 +19,6 @@ const SectionGroup = styled.div`
 `
 
 const SectionLogo = styled.img`
-    height: 256px;
-    width: 252px;
     margin: 0 auto;
     align-self: end;
     border-top-left-radius: 50% 50%;
@@ -70,19 +68,6 @@ const SectionText = styled.p`
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 `
 
-const WaveTop = styled.div`
-    position: absolute;
-    width: 100%;
-    top: -6px;
-    transform: rotate(180deg)
-`
-
-const WaveBottom = styled.div`
-    position: absolute;
-    width: 100%;
-    bottom: -6px;
-`
-
 const Section = props => (
     <SectionGroup >
         <SectionLogo src={props.logo} />
@@ -90,7 +75,6 @@ const Section = props => (
             <SectionTitle>{props.title}</SectionTitle>
             <SectionText>{props.text}</SectionText>
         </SectionTitleGroup>
-   
     </SectionGroup>
 )
 
