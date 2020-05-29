@@ -18,6 +18,7 @@ const SectionCaption = styled.div`
   text-align: center;
   margin-top: 2rem;
   font-size: 4rem;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 
   @media (max-width: 560px) {
     font-size: 3rem;
@@ -75,29 +76,29 @@ class IndexPage extends React.Component{
               <span className="loopedText">attempting to vacuum more</span>
             </TextLoop>
           </p>
-          <span className="HeroLink"
+          <div className="HeroLink"
           onClick={e => {
              this.showForm(e);
-          }}>Let's Chat!</span>
-          <Modal onClose={this.showForm} show={this.state.show}>
-          <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
-            <h4>I'll get back to you ASAP (I mean it)</h4>
-            <fieldset>
-              <input type="text" name="name" placeholder="Your Name"/>
-            </fieldset>
-            <fieldset>
-              <input type="email" name="email" placeholder="Your Email"/>
-            </fieldset>
-            <fieldset>
-              <input type="email" name="email" placeholder="Your Phone Number (This is HTTPS 😎)"/>
-            </fieldset>
-            <fieldset>
-              <textarea name="message" placeholder="Get In Touch"></textarea>
-            </fieldset>
-          <button className="closeForm"><h5>Send</h5></button>
-          <input type="hidden" name="form-name" value="contact" />
-          </form>
-          </Modal>
+          }}>Get in touch</div>
+            <Modal onClose={this.showForm} show={this.state.show}>
+            <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+              <h4>I'll get back to you ASAP (I mean it)</h4>
+              <fieldset>
+                <input type="text" name="name" placeholder="Your Name"/>
+              </fieldset>
+              <fieldset>
+                <input type="email" name="email" placeholder="Your Email"/>
+              </fieldset>
+              <fieldset>
+                <input type="email" name="email" placeholder="Your Phone Number (This is HTTPS 😎)"/>
+              </fieldset>
+              <fieldset>
+                <textarea name="message" placeholder="Get In Touch"></textarea>
+              </fieldset>
+            <button className="closeForm"><h5>Send</h5></button>
+            <input type="hidden" name="form-name" value="contact" />
+            </form>
+            </Modal>
           <svg width="100%" height="172" viewBox="0 0 100% 172" fill="none">
           <path fill="rgb(33, 44, 79)">
           </path>

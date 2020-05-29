@@ -20,18 +20,14 @@ class Card extends React.Component {
       render () {
           return (
             <div className="crap">
-                <div className="Card">
+                <div className="Card"
+                    onClick={e => {
+                    this.showModal(e);
+                }}>
                     <img className="image" src={this.props.image} />
+                <div className="headerWrapper">
                     <h3 className="header">{this.props.title}</h3>
-                    <h3
-                        className="toggle-button"
-                        id="centered-toggle-button"
-                        onClick={e => {
-                        this.showModal(e);
-                        }}
-                    >
-                    {this.props.buttonText}
-                    </h3>
+                </div>
                 </div>
                 <Modal onClose={this.showModal} show={this.state.show}>
                     <div className="fart">

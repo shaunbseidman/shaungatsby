@@ -7,7 +7,7 @@ const SectionGroup = styled.div`
     margin: 100px 0 0;
     background: url('https://gdurl.com/Jh32');
     background-size: cover;
-    height: 626px;
+    height: 611px;
     display: grid;
     grid-template-rows: 300px auto;
     grid-gap: 20px;
@@ -36,10 +36,12 @@ const SectionTitleGroup = styled.div`
     grid-gap: 20px;
     grid-template-columns: 300px auto;
     grid-template-rows: auto 100%;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 
     @media (max-width: 720px) {
         grid-template-columns: 1fr;
-    }    max-width: 800px;
+    }
+     max-width: 800px;
     margin: 0 40px;
     display: grid;
     grid-gap: 20px;
@@ -65,6 +67,7 @@ const SectionTitle = styled.h3`
 
 const SectionText = styled.p`
     color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 `
 
 const WaveTop = styled.div`

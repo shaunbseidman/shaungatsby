@@ -7,23 +7,27 @@
     overflow: hidden;
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0,0,0, 0.15);
-    display: grid;
     grid-template-rows: 1fr 1fr;
     transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
     cursor: pointer;
+    background: rgba(187,187,187,0.8);
+
 
     .header {
         font-size: 30px;
-        margin: 20px 0 0 20px;
-        width: 190px;
-        color: $black;
-        background: rgba(187,187,187,0.8);
+        color: #edea13;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        margin-left: 1.4rem;
         border-radius: 10px;
-        box-shadow: 0 10px 20px rgba(0,0,0, 0.25);
         transform: translateY(-3px);
         transform: scale(1.1, 1.1);
         transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1.0);
-        padding: 4px 18px;
+        height: 100%;
+        letter-spacing: 1.7px;
+    }
+
+    .headerWrapper {
+        height: 100%
     }
 
     .text {
@@ -39,12 +43,22 @@
         height: 110%;
         position: absolute;
         top: 0;
+        left: 0;
         z-index: -1;
         transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 
         :hover {
             transform: translateY(-20px);
         }
+    }
+
+    &:hover {
+        -moz-transition: all .2s ease-in;
+        -o-transition: all .2s ease-in;
+        -webkit-transition: all .2s ease-in;
+        transition: all .2s ease-in;
+        background: rgba(187,187,187,0.8);
+        padding: .4rem;
     }
 }
 
@@ -53,11 +67,6 @@
     left: auto;
     right: 50%;
     margin-right: -496px;
-}
-
-.Card:hover {
-    transform: scale(1.1, 1.1);
-    box-shadow: 0 30px 60px rgba(0,0,0, 0.5);
 }
 
 
