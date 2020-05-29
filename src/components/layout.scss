@@ -43,7 +43,7 @@ body {
     &:hover {
       transform: translateY(-3px);
       transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1.0);
-  }
+    }
   }
 
   .Hero {
@@ -132,6 +132,7 @@ body {
       color: rgba(255,255,255, 0.8);
       animation: HeroAnimation 3s 0.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
       opacity: 0;
+      margin-bottom: 3rem;
 
       .loopedText {
         text-decoration: underline;
@@ -168,7 +169,7 @@ body {
     cursor: pointer;
 
     @include mqViewportMobile {
-      font-size: 11px;
+      font-size: 13px;
     }
 
     &:hover {
@@ -219,14 +220,11 @@ body {
 
 
   @include mqViewportMobile {
-    // .HeroGroup {
-    //   padding: 100px 20px;
-    // }
     .Hero h1 {
       font-size: 40px;
     }
     .Hero p {
-      font-size: 24px;
+      font-size: 20px;
     }
   }
 
