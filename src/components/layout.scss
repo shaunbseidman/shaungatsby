@@ -144,8 +144,16 @@ body {
 
   }
 
-  .HeroLink {
+  .HeroLinkContainer {
     margin-top: 4rem;
+
+    @include mqViewportMobile {
+      margin-top: 4rem;
+    }
+
+  }
+
+  .HeroLink {
     margin-left: 0;
     margin-right: 0;
     font-size: 17px;
@@ -160,8 +168,7 @@ body {
     cursor: pointer;
 
     @include mqViewportMobile {
-      margin-top: 4rem;
-      font-size: 13px;
+      font-size: 11px;
     }
 
     &:hover {
