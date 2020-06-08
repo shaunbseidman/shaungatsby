@@ -30,13 +30,16 @@ class Card extends React.Component {
                 </div>
                 </div>
                 <Modal onClose={this.showModal} show={this.state.show}>
-                    <div className="fart">
+                    <div className="container">
                         <h3 className="modalHeader">{this.props.modalHeader}</h3>
                         <div className="modalStackText">{this.props.modalStack}</div>
+                        <a href={this.props.modalLink} target="_blank" className="modalLink">{this.props.modalLink}</a>
+                        <br/>
+                        <a href={this.props.modalRepo} target="_blank"className="modalRepo">{this.props.modalRepo}</a>
                         <div className="modalText">{this.props.modalText}</div>
                         <div className="modalImages">
-                        <img className="modalImage" src={this.props.modalImage}></img>
-                        <img className="modalImage" src={this.props.secondaryImage}></img>
+                            <img className="modalImage" src={this.props.modalImage}></img>
+                            <img className="modalImage" src={this.props.secondaryImage}></img>
                         </div>
                     </div>
                 </Modal>

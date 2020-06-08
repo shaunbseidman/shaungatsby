@@ -62,7 +62,7 @@
     }
 }
 
-.fart {
+.container {
     width: 100%;
     left: auto;
     right: 50%;
@@ -93,6 +93,10 @@
 
   .modalText {
       font-size: 1rem;
+  }
+
+  .modalLink, .modalRepo {
+      cursor: pointer;
   }
 
   .modalStackText {

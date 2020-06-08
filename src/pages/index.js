@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import Card from '../components/card';
 import data from '../../data.json'
 import styled from 'styled-components'
@@ -89,7 +88,7 @@ class IndexPage extends React.Component{
                 <input type="text" name="name" placeholder="Your Name"/>
               </fieldset>
               <fieldset>
-                <textarea name="message" placeholder="Get In Touch"></textarea>
+                <textarea name="message" placeholder="Shoot me a message"></textarea>
               </fieldset>
             <button className="closeForm"><h5>Send</h5></button>
             <input type="hidden" name="form-name" value="contact" />
@@ -100,12 +99,12 @@ class IndexPage extends React.Component{
           </path>
         </svg>
         </div>
-      </div> 
+      </div>
       <div className="Cards" id="work">
         <h2>Projects</h2>
           <div className="CardGroup">
           {projects.projects.map(project => (
-            <Card 
+            <Card
             title={project.title}
             image={project.image}
             buttonText={project.buttonText}
@@ -113,6 +112,8 @@ class IndexPage extends React.Component{
             modalStack={project.modalStack}
             modalText={project.modalText}
             modalImage={project.modalImage}
+            modalLink={project.link}
+            modalRepo={project.repo}
             />
           ))}
           </div>

@@ -24,7 +24,7 @@
             "modalText": "Created user interface for instructor's to be able to select a single or bulk delete questions",
             "modalHeader": "Instructor Dashboard",
             "buttonText": "View More",
-            "modalStack": "React Redux JavaScript SASS",
+            "modalStack": "React Redux JavaScript SASS MaterialUI",
             "image": "https://gdurl.com/ooAb",
             "secondaryImage": "https://gdurl.com/WMfL",
             "modalImage": "https://gdurl.com/ooAb"
@@ -47,6 +47,17 @@
             "image": "https://gdurl.com/Ad5H",
             "secondaryImage": "https://gdurl.com/AbRC",
             "modalImage": "https://gdurl.com/Ad5H"
+        },
+        {
+            "title": "React todo 2020",
+            "modalText": "Every time you make a new todo app, god kills a kitten",
+            "buttonText": "View More",
+            "modalHeader": "React Todo 2020",
+            "modalStack": "React Redux MaterialUI Surge",
+            "image": "https://gdurl.com/cbY7",
+            "secondaryImage": "https://gdurl.com/AbRC",
+            "link": "https://encouraging-oil.surge.sh/",
+            "repo": "https://github.com/shaunbseidman/NH-todo"
         },
         {
             "title": "My Portfolio (this)",
